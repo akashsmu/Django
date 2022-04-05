@@ -9,3 +9,9 @@ def index(requests):
         'nationality':'Indian'
         }
     return render(requests,'index.html',context)
+
+def counter(request):
+    text=request.POST['text']
+    amt=len(text.split())
+    return render(request,'counter.html',{'amount':amt})
+

@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from myApp.views import counter
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('myApp.url'))
+    path('',include('myApp.url')),
 ]
